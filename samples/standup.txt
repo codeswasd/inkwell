@@ -1,0 +1,6 @@
+Standup notes
+
+Yesterday: wired up sharing.
+Today: polish the editor.
+
+Blockers: none.

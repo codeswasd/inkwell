@@ -1,0 +1,14 @@
+# One-click deploy on Render (free tier): New → Blueprint → point at this repo.
+services:
+  - type: web
+    name: inkwell
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATA_DIR
+        value: ./data
